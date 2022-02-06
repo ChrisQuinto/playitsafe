@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Play It Safe</string>
+    <string name="btnCreateEvent">Create Event</string>
+    <string name="btnCheckIn">Check In</string>
+    <string name="btnPlay">Play</string>
+    <string name="btnDatabase">Database</string>
+    <string name="btnSave">Save</string>
+    <string name="btnProceed">Proceed</string>
+    <string name="btnConfirm">Confirm</string>
+    <string name="btnGenerate">Generate Code</string>
+    <string name="btnBack">Back</string>
+    <string name="etFirstName_hint">First Name</string>
+    <string name="tvPhoneLabel_text">Phone Number</string>
+    <string name="tvEmailLabel_text">Email</string>
+    <string name="etLastName_hint">Last Name</string>
+    <string name="etEmail_hint">Email Address</string>
+    <string name="etPhone_hint">Phone Number</string>
+    <string name="tvFirstNameLabel_text">First Name</string>
+    <string name="tvLastNameLabel_text">Last Name</string>
+    <string name="tvLocationLabel_text">Location:</string>
+    <string name="tvDateLabel_text">Date:</string>
+    <string name="tvLocation_text">Unknown</string>
+    <string name="tvDate_text">Unknown</string>
+    <string name="outdated_event_title">Warning: Outdated Event</string>
+    <string name="outdated_event_message">The event you are entering is using an outdated timecode and might already be over. Are you sure you want to register regardless?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="unknown_code">Unknown Code</string>
+    <string name="checkin_notification1">\"You\'ve successfully checked into an event in \"</string>
+    <string name="checkin_notification2">\" under the name \"</string>
+    <string name="etEventID_hint">Enter Event Name</string>
+</resources>

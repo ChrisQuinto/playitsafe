@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_checkin.xml" value="0.264" />
+        <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_create_event.xml" value="0.25416666666666665" />
+        <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_database.xml" value="0.25416666666666665" />
+        <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_eventlist.xml" value="0.23324275362318841" />
+        <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_play.xml" value="0.264" />
+        <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_playsettings.xml" value="0.23550724637681159" />
+        <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_regdata.xml" value="0.264" />
+        <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_settings.xml" value="0.264" />
+        <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_usercard.xml" value="0.24003623188405798" />
+        <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_userdata.xml" value="0.23550724637681159" />
+        <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/event.xml" value="0.25416666666666665" />
+        <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/example_item.xml" value="0.25271739130434784" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
