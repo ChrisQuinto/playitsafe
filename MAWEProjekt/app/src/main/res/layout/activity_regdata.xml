@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tvFirstNameLabel_text"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/tvLastNameLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.15"
@@ -22,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tvLastNameLabel_text"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/tvEmailLabel"
         app:layout_constraintStart_toStartOf="@+id/tvFirstNameLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvFirstNameLabel" />
@@ -31,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tvEmailLabel_text"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/tvPhoneLabel"
         app:layout_constraintStart_toStartOf="@+id/tvLastNameLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvLastNameLabel" />
@@ -40,6 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tvPhoneLabel_text"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btnRegSave"
         app:layout_constraintStart_toStartOf="@+id/tvEmailLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvEmailLabel" />
@@ -52,12 +56,15 @@
         android:ems="10"
         android:hint="@string/etFirstName_hint"
         android:inputType="textPersonName"
+        android:maxLines="1"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/etLastName"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFirstNameLabel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tvFirstNameLabel"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/tvFirstNameLabel" />
 
     <EditText
         android:id="@+id/etLastName"
@@ -67,10 +74,13 @@
         android:ems="10"
         android:hint="@string/etLastName_hint"
         android:inputType="textPersonName"
+        android:maxLines="1"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/etEmail"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLastNameLabel"
         app:layout_constraintEnd_toEndOf="@+id/etFirstName"
-        app:layout_constraintTop_toBottomOf="@+id/etFirstName" />
+        app:layout_constraintTop_toTopOf="@+id/tvLastNameLabel" />
 
     <EditText
         android:id="@+id/etEmail"
@@ -80,10 +90,13 @@
         android:ems="10"
         android:hint="@string/etEmail_hint"
         android:inputType="textEmailAddress"
+        android:maxLines="1"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/etPhone"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvEmailLabel"
         app:layout_constraintEnd_toEndOf="@+id/etLastName"
-        app:layout_constraintTop_toBottomOf="@+id/etLastName" />
+        app:layout_constraintTop_toTopOf="@+id/tvEmailLabel" />
 
     <EditText
         android:id="@+id/etPhone"
@@ -93,10 +106,13 @@
         android:ems="10"
         android:hint="@string/etPhone_hint"
         android:inputType="phone"
+        android:maxLines="1"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegSave"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPhoneLabel"
         app:layout_constraintEnd_toEndOf="@+id/etEmail"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+        app:layout_constraintTop_toTopOf="@+id/tvPhoneLabel" />
 
     <Button
         android:id="@+id/btnRegSave"

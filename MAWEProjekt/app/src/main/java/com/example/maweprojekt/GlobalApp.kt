@@ -16,9 +16,9 @@ class GlobalApp() : Application() {
     var firstname: String = ""
     var lastname: String = ""
     var email: String = ""
-    var phone: Int? = null
+    var phone: Long? = null
 
-    fun checkUser(): Boolean {
+    fun checkForUser(): Boolean {
         return (firstname != "" && lastname != "" && email != "" && phone != null)
     }
 

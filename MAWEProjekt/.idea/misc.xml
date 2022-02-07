@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ChPaf/Uni/Master/Entwichlung Mobiler Anwendungen/playitsafe/MAWEProjekt/app/src/main/res/layout/activity_create_event.xml" value="0.25416666666666665" />
+        <entry key="..\:/ChPaf/Uni/Master/Entwichlung Mobiler Anwendungen/playitsafe/MAWEProjekt/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/ChPaf/Uni/Master/Entwichlung Mobiler Anwendungen/playitsafe/MAWEProjekt/app/src/main/res/layout/activity_playsettings.xml" value="0.25416666666666665" />
+        <entry key="..\:/ChPaf/Uni/Master/Entwichlung Mobiler Anwendungen/playitsafe/MAWEProjekt/app/src/main/res/layout/activity_regdata.xml" value="0.25416666666666665" />
+        <entry key="..\:/ChPaf/Uni/Master/Entwichlung Mobiler Anwendungen/playitsafe/MAWEProjekt/app/src/main/res/layout/event.xml" value="0.25416666666666665" />
         <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_checkin.xml" value="0.264" />
         <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_create_event.xml" value="0.25416666666666665" />
         <entry key="..\:/Programme/AndroidStudioProjects/MAWEProjekt/app/src/main/res/layout/activity_database.xml" value="0.25416666666666665" />

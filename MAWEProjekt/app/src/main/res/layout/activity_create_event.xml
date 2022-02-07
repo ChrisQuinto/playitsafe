@@ -19,13 +19,14 @@
     <EditText
         android:id="@+id/etEventID"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:autofillHints="Event Name"
         android:hint="@string/etEventID_hint"
         android:paddingStart="16dp"
+        android:paddingEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ivGeneratedQR" />

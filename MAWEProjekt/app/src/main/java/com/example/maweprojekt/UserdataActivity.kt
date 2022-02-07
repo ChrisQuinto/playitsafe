@@ -24,6 +24,10 @@ class UserdataActivity : AppCompatActivity() {
         tlUserData.tvFirstNameTable.text = GlobalApp.appinstance.firstname
         tlUserData.tvLastNameTable.text = GlobalApp.appinstance.lastname
         tlUserData.tvEmailTable.text = GlobalApp.appinstance.email
-        tlUserData.tvPhoneTable.text = GlobalApp.appinstance.phone.toString()
+        if (GlobalApp.appinstance.phone.toString() == "null") {
+            tlUserData.tvPhoneTable.text = ""
+        } else {
+            tlUserData.tvPhoneTable.text = GlobalApp.appinstance.phone.toString()
+        }
     }
 }

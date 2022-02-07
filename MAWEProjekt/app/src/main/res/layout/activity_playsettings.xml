@@ -10,9 +10,12 @@
         android:id="@+id/tvPlayerCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Number of Players"
+        android:layout_marginStart="32dp"
+        android:text="@string/tvPlayerCount_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tvStartingPoints"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/sbPlayerCount"
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,17 +24,83 @@
         android:id="@+id/tvStartingPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Starting Points"
+        android:text="@string/tvStartingPoints_text"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/tvBeginner"
+        app:layout_constraintEnd_toEndOf="@+id/tvPlayerCount"
         app:layout_constraintStart_toStartOf="@+id/tvPlayerCount"
         app:layout_constraintTop_toBottomOf="@+id/tvPlayerCount" />
+
+    <TextView
+        android:id="@+id/tvBeginner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvBeginner_text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartPlaying"
+        app:layout_constraintEnd_toEndOf="@+id/tvStartingPoints"
+        app:layout_constraintStart_toStartOf="@+id/tvStartingPoints"
+        app:layout_constraintTop_toBottomOf="@+id/tvStartingPoints" />
+
+    <TextView
+        android:id="@+id/tvSeekBarLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvSeekBarLabel_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/sbPlayerCount"
+        app:layout_constraintEnd_toEndOf="@+id/sbPlayerCount"
+        app:layout_constraintStart_toStartOf="@+id/sbPlayerCount" />
+
+    <SeekBar
+        android:id="@+id/sbPlayerCount"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:max="6"
+        android:min="2"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPlayerCount"
+        app:layout_constraintEnd_toEndOf="@+id/etStartingPoints"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvPlayerCount"
+        app:layout_constraintStart_toStartOf="@+id/etStartingPoints"
+        app:layout_constraintTop_toTopOf="@+id/tvPlayerCount" />
+
+    <EditText
+        android:id="@+id/etStartingPoints"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:autofillHints="Starting Points"
+        android:digits="03"
+        android:ems="10"
+        android:hint="@string/etStartingPoints_hint"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvStartingPoints"
+        app:layout_constraintEnd_toEndOf="@+id/cbBeginner"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvStartingPoints"
+        app:layout_constraintStart_toStartOf="@+id/cbBeginner"
+        app:layout_constraintTop_toTopOf="@+id/tvStartingPoints" />
+
+    <CheckBox
+        android:id="@+id/cbBeginner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBeginner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvBeginner"
+        app:layout_constraintTop_toTopOf="@+id/tvBeginner" />
 
     <Button
         android:id="@+id/btnStartPlaying"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="Start"
+        android:text="@string/btnStart"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSettingsBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -41,53 +110,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
-        android:text="Back"
+        android:text="@string/btnBack"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tvBeginner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Determine Beginner"
-        app:layout_constraintBottom_toTopOf="@+id/btnStartPlaying"
-        app:layout_constraintStart_toStartOf="@+id/tvStartingPoints"
-        app:layout_constraintTop_toBottomOf="@+id/tvStartingPoints" />
-
-    <SeekBar
-        android:id="@+id/sbPlayerCount"
-        android:layout_width="128dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/etStartingPoints"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvPlayerCount"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/cbBeginner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CheckBox"
-        app:layout_constraintBottom_toTopOf="@+id/btnStartPlaying"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvBeginner"
-        app:layout_constraintTop_toBottomOf="@+id/etStartingPoints" />
-
-    <EditText
-        android:id="@+id/etStartingPoints"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="20"
-        android:inputType="number"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/cbBeginner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvStartingPoints"
-        app:layout_constraintTop_toBottomOf="@+id/sbPlayerCount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

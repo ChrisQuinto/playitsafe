@@ -36,7 +36,7 @@ class RegdataActivity : AppCompatActivity() {
         email = findViewById(R.id.etEmail)
         phone = findViewById(R.id.etPhone)
 
-        if (GlobalApp.appinstance.checkUser()) {
+        if (GlobalApp.appinstance.checkForUser()) {
             firstname.setText(GlobalApp.appinstance.firstname)
             lastname.setText(GlobalApp.appinstance.lastname)
             email.setText(GlobalApp.appinstance.email)
@@ -53,7 +53,7 @@ class RegdataActivity : AppCompatActivity() {
             GlobalApp.appinstance.firstname = etFirstName.text.toString()
             GlobalApp.appinstance.lastname = etLastName.text.toString()
             GlobalApp.appinstance.email = etEmail.text.toString()
-            GlobalApp.appinstance.phone = etPhone.text.toString().toInt()
+            GlobalApp.appinstance.phone = etPhone.text.toString().toLong()
             btnProceed.isEnabled = true
             btnSave.isEnabled = false
         }
