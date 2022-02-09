@@ -49,7 +49,7 @@ class RegdataActivity : AppCompatActivity() {
         email.addTextChangedListener(twSave)
         phone.addTextChangedListener(twSave)
 
-        btnSave.setOnClickListener{
+        btnSave.setOnClickListener {
             GlobalApp.appinstance.firstname = etFirstName.text.toString()
             GlobalApp.appinstance.lastname = etLastName.text.toString()
             GlobalApp.appinstance.email = etEmail.text.toString()
@@ -64,8 +64,7 @@ class RegdataActivity : AppCompatActivity() {
                     putExtra("EXTRA_INFO", "This is my Info")
                 }
                 startActivity(intent)
-            }
-            else if (howtoproceed == "CheckIn") {
+            } else if (howtoproceed == "CheckIn") {
                 val intent = Intent(this, CheckInActivity::class.java).apply {
                     putExtra("EXTRA_INFO", "This is my Info")
                 }
@@ -73,7 +72,7 @@ class RegdataActivity : AppCompatActivity() {
             }
         }
 
-        btnBack.setOnClickListener{
+        btnBack.setOnClickListener {
             finish()
         }
     }
@@ -86,8 +85,10 @@ class RegdataActivity : AppCompatActivity() {
             val em: String = email.text.toString().trim()
             val ph: String = phone.text.toString().trim()
             print(fn.isNotEmpty() && ln.isNotEmpty() && em.isNotEmpty() && ph.isNotEmpty())
-            btnSave.isEnabled = (fn.isNotEmpty() && ln.isNotEmpty() && em.isNotEmpty() && ph.isNotEmpty())
+            btnSave.isEnabled =
+                (fn.isNotEmpty() && ln.isNotEmpty() && em.isNotEmpty() && ph.isNotEmpty())
         }
+
         override fun afterTextChanged(s: Editable) {}
     }
 }

@@ -6,14 +6,285 @@
     android:layout_height="match_parent"
     tools:context=".PlayActivity">
 
-    <Button
-        android:id="@+id/btnPlayBack"
+    <View
+        android:id="@+id/vPlayLineV"
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:background="#3F51B5"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlayBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vPlayLineH"
+        android:layout_width="5dp"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlayBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grPlayer1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/purple_500"
+        android:visibility="visible"
+        app:constraint_referenced_ids="tvPlayP1points, tvPlayP1name, btnPlayP1add, btnPlayP1sub"
+        app:layout_constraintBottom_toTopOf="@+id/vPlayLineV"
+        app:layout_constraintEnd_toStartOf="@+id/vPlayLineH"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlayP1points"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
-        android:text="Back"
+        android:gravity="center"
+        android:text="@string/tvP1points"
+        android:textColor="@color/white"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlayP1name"
+        app:layout_constraintEnd_toStartOf="@+id/vPlayLineH"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlayP1name"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="@color/purple_700"
+        android:gravity="center"
+        android:text="@string/player_one"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/vPlayLineV"
+        app:layout_constraintEnd_toStartOf="@+id/vPlayLineH"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPlayP1add"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlayP1sub"
+        app:layout_constraintEnd_toStartOf="@+id/vPlayLineH"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPlayP1sub"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlayP1name"
+        app:layout_constraintEnd_toStartOf="@+id/vPlayLineH"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayP1add" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grPlayer2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#1EA01E"
+        android:visibility="visible"
+        app:constraint_referenced_ids="tvPlayP2points, tvPlayP2name, btnPlayP2add, btnPlayP2sub"
+        app:layout_constraintBottom_toTopOf="@+id/vPlayLineV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vPlayLineH"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlayP2points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/tvP2points"
+        android:textColor="@color/white"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlayP2name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vPlayLineH"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlayP2name"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="#1E501E"
+        android:gravity="center"
+        android:text="@string/player_two"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/vPlayLineV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vPlayLineH" />
+
+    <Button
+        android:id="@+id/btnPlayP2add"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlayP2sub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/vPlayLineH"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPlayP2sub"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlayP2name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/vPlayLineH"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayP2add" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grPlayer3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#A01E1E"
+        android:visibility="visible"
+        app:constraint_referenced_ids="tvPlayP3points, tvPlayP3name, btnPlayP3add, btnPlayP3sub"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlayBack"
+        app:layout_constraintEnd_toStartOf="@+id/vPlayLineH"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vPlayLineV" />
+
+    <TextView
+        android:id="@+id/tvPlayP3points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/tvP3points"
+        android:textColor="@color/white"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlayP3name"
+        app:layout_constraintEnd_toStartOf="@+id/vPlayLineH"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vPlayLineV" />
+
+    <TextView
+        android:id="@+id/tvPlayP3name"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="#501E1E"
+        android:gravity="center"
+        android:text="@string/player_three"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlayBack"
+        app:layout_constraintEnd_toStartOf="@+id/vPlayLineH"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPlayP3add"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlayP3sub"
+        app:layout_constraintEnd_toStartOf="@+id/vPlayLineH"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vPlayLineV" />
+
+    <Button
+        android:id="@+id/btnPlayP3sub"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlayP3name"
+        app:layout_constraintEnd_toStartOf="@+id/vPlayLineH"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayP3add" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grPlayer4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#A0A000"
+        android:visibility="gone"
+        app:constraint_referenced_ids="tvPlayP4points, tvPlayP4name, btnPlayP4add, btnPlayP4sub"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlayBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vPlayLineH"
+        app:layout_constraintTop_toBottomOf="@id/vPlayLineV" />
+
+    <TextView
+        android:id="@+id/tvPlayP4points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/tvP4points"
+        android:textColor="@color/white"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlayP4name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vPlayLineH"
+        app:layout_constraintTop_toBottomOf="@id/vPlayLineV" />
+
+    <TextView
+        android:id="@+id/tvPlayP4name"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:background="#5A5000"
+        android:gravity="center"
+        android:text="@string/player_four"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlayBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vPlayLineH" />
+
+    <Button
+        android:id="@+id/btnPlayP4add"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPlayP4sub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/vPlayLineH"
+        app:layout_constraintTop_toBottomOf="@id/vPlayLineV" />
+
+    <Button
+        android:id="@+id/btnPlayP4sub"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlayP4name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/vPlayLineH"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlayP4add" />
+
+    <Button
+        android:id="@+id/btnPlayBack"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:text="@string/btnBack"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

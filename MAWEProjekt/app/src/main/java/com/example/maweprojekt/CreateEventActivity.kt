@@ -127,8 +127,8 @@ class CreateEventActivity : AppCompatActivity() {
 
     private fun alertQRcodeBack() {
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("Warning: Generated code will be lost!")
-        builder.setMessage("Are you sure you want to go back?")
+        builder.setTitle(getString(R.string.alertQRcodeBack_title))
+        builder.setMessage(getString(R.string.alertQRcodeBack_message))
         builder.setPositiveButton(getString(R.string.yes)) { dialog, _ ->
             dialog.cancel()
             finish()
