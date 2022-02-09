@@ -109,7 +109,7 @@ class CreateEventActivity : AppCompatActivity() {
         builder.setPositiveButton(getString(R.string.start_playing)) { dialog, _ ->
             dialog.cancel()
 
-            val eventStartNotification = "Started Event: " + etEventID.text
+            val eventStartNotification = getString(R.string.toast_eventStart) + etEventID.text
             Toast.makeText(applicationContext, eventStartNotification, Toast.LENGTH_LONG).show()
 
             val intent = Intent(this, PlaySettingsActivity::class.java).apply {

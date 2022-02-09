@@ -17,7 +17,7 @@ class RegdataActivity : AppCompatActivity() {
     lateinit var phone: EditText
 
     lateinit var btnSave: Button
-    lateinit var btnProceed: Button
+    private lateinit var btnProceed: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

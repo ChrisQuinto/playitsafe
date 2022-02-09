@@ -20,7 +20,7 @@ class UserdataActivity : AppCompatActivity() {
         }
     }
 
-    fun updateUserData() {
+    private fun updateUserData() {
         tlUserData.tvFirstNameTable.text = GlobalApp.appinstance.firstname
         tlUserData.tvLastNameTable.text = GlobalApp.appinstance.lastname
         tlUserData.tvEmailTable.text = GlobalApp.appinstance.email

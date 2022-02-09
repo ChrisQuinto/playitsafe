@@ -2,7 +2,7 @@ package com.example.maweprojekt
 
 import android.app.Application
 
-class GlobalApp() : Application() {
+class GlobalApp : Application() {
 
     companion object {
         lateinit var appinstance: GlobalApp
@@ -12,7 +12,7 @@ class GlobalApp() : Application() {
         appinstance = this
     }
 
-    var eventList: ArrayList<Event> = ArrayList<Event>()
+    var eventList: ArrayList<Event> = ArrayList()
     var firstname: String = ""
     var lastname: String = ""
     var email: String = ""
@@ -25,9 +25,9 @@ class GlobalApp() : Application() {
     fun addEvent(location: String, date: String, time: String) {
         val newEvent = Event(
             R.drawable.ic_safe,
-            text1 = "$location",
+            text1 = location,
             text2 = "$date, $time"
         )
-        eventList.add(newEvent)
+        eventList.add(0, newEvent)
     }
 }

@@ -71,16 +71,16 @@ class CheckInActivity : AppCompatActivity() {
     }
 
     private fun checkinSuccessNotification() {
-        val checkinNotification = getString(R.string.checkin_notification1) +
-                tvLocation.text + getString(R.string.checkin_notification2) +
+        val checkinNotification = getString(R.string.toast_checkin1) +
+                tvLocation.text + getString(R.string.toast_checkin2) +
                 "${GlobalApp.appinstance.firstname} ${GlobalApp.appinstance.lastname}."
         Toast.makeText(applicationContext, checkinNotification, Toast.LENGTH_LONG).show()
     }
 
     private fun alertOutdatedEvent() {
         val builder = AlertDialog.Builder(this)
-        builder.setTitle(getString(R.string.outdated_event_title))
-        builder.setMessage(getString(R.string.outdated_event_message))
+        builder.setTitle(getString(R.string.alertOutdatedEvent_title))
+        builder.setMessage(getString(R.string.alertOutdatedEvent_message))
         builder.setPositiveButton(getString(R.string.yes)) { dialog, _ ->
             updateEventlist()
             checkinSuccessNotification()
@@ -107,7 +107,7 @@ class CheckInActivity : AppCompatActivity() {
             tvDate.text = arr[2]
             btnCheckInConfirm.isEnabled = true
         } else {
-            val wrongCodeNotification = getString(R.string.unknown_code)
+            val wrongCodeNotification = getString(R.string.toast_unknownCode)
             Toast.makeText(applicationContext, wrongCodeNotification, Toast.LENGTH_LONG).show()
         }
     }

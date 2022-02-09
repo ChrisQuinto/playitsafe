@@ -76,7 +76,7 @@ class PlaySettingsActivity : AppCompatActivity() {
             } else {
                 val intent = Intent(this, PlayActivity::class.java).also {
                     it.putExtra("EXTRA_PLAYERS", tvPlayers.text.toString().toInt())
-                    it.putExtra("EXTRA_POINTS", etPoints.text.toString())
+                    it.putExtra("EXTRA_POINTS", etPoints.text.toString().toInt())
                     it.putExtra("EXTRA_BEGINNER", cbBeginner.isChecked)
                     it.putExtra("EXTRA_P1", etP1name.text.toString())
                     it.putExtra("EXTRA_P2", etP2name.text.toString())
